@@ -18,6 +18,39 @@ navLinks.addEventListener("click", () => {
 });
 
 
+
+const modal = document.querySelector(".modal");
+const openModalButtons = document.querySelectorAll(".open_modal");
+const closeModal = document.querySelector(".close_modal");
+
+const modalTitle = document.querySelector(".modal_info h2");
+const modalPrice = document.querySelector(".modal_info h3");
+const modalImage = document.querySelector(".modal_img img");
+const modalDescription = document.querySelector(".modal_info p");
+
+openModalButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+        modal.classList.add("active");
+
+        modalTitle.textContent = button.dataset.title;
+        modalPrice.textContent = button.dataset.price;
+        modalImage.src = button.dataset.image;
+        modalDescription.textContent = button.dataset.description;
+    });
+});
+
+closeModal.addEventListener("click", () => {
+    modal.classList.remove("active");
+});
+
+modal.addEventListener("click", (event) => {
+    if(event.target === modal){
+    modal.classList.remove("active");
+    }
+});
+
+
+
 const scrollRevealOption = {
     distance: "50px",
     origin: "bottom",

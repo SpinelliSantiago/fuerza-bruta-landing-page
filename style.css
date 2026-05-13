@@ -15,7 +15,7 @@ html{
 }
 
 body{
-    background: linear-gradient(225deg,#131519,#07223f,#032a53, #10051f);
+    background: linear-gradient(225deg,#090228,#123f6e,#051c34, #260c4a);
     font-family: "Montserrat", sans-serif;
 }
 
@@ -142,16 +142,16 @@ header{
     border: none;
     font-size: 14px;
     font-weight: bold;
-    border-radius: 5rem;
+    border-radius: 100px;
     transition: 0.3s;
     cursor: pointer;
-    border: 2px solid var(--primary-color-darker);
+    border: 1px solid var(--primary-color-dark);
     color: var(--text-dark);
     background-color: var(--primary-color);
 }
 
 .header_btn button:hover {
-    border: 2px solid var(--white);
+    border: 1px solid var(--primary-color);
     color: var(--white);
     background-color: var(--primary-color-darker);
 }
@@ -174,27 +174,26 @@ header{
 }
 
 .header_socials a:hover {
-    border: 2px solid var(--primary-color);
     color: var(--white);
     background-color: transparent;
 }
 
-/*------- header productos ------*/
-.header_productos h4{
+/*------- HEADER PRODUCTS ------*/
+.header_products h4{
     font-size: 1.5rem;
     text-align: center;
     margin: 80px 0 20px 0;
     color: var(--primary-color-dark);
 }
 
-.header_productos h3{
+.header_products h3{
     font-size: 2.5rem;
     text-align: center;
     margin: 10px 0;
     color: var(--white);
 }
 
-.header_productos h3::after{
+.header_products h3::after{
     content: "";
     display: block;
     width: 10%;
@@ -203,14 +202,14 @@ header{
     margin: 25px auto 0;
 }
 
-.header_productos p{
+.header_products p{
     font-size: 1.2rem;
     text-align: center;
     margin: 20px 0 30px 0;
     color: var(--white);
 }
 
-/*---------- productos ----------*/
+/*---------- PRODUCTS ----------*/
 .products_grid{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -224,6 +223,7 @@ header{
     min-height: auto;
     background-color: #121e36;
     transition: 0.3s;
+    box-shadow: 0 0 5px #80bffa18;
 }
 
 .card:hover{
@@ -246,6 +246,7 @@ header{
     width: 40%;
     display: block;
     margin: 0 auto;
+    filter: drop-shadow(0 0 10px #000000);
 }
 
 span{
@@ -263,7 +264,7 @@ span{
 
 .card_footer button{
     padding: 8px;
-    border-radius: 15px;
+    border-radius: 100px;
     border: 2px solid var(--primary-color);
     cursor: pointer;
     font-size: 16px;
@@ -279,7 +280,135 @@ span{
     background: #121e36;
 }
 
-/*--------- beneficios --------*/
+/*---------- MODAL ----------*/
+.modal{
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+    background-color: #01366b32;
+    z-index: 10;
+}
+
+.modal.active{
+    display: flex;
+}
+
+.modal_content{
+    width: 900px;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid black;
+    background:#02122e;
+}
+
+.close_modal{
+    position: absolute;
+    margin-left: 830px;
+    margin-top: 20px;
+    font-size: 35px;
+    cursor: pointer;
+    color: var(--white);
+}
+
+.modal_product{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    padding: 10px;
+}
+
+.modal_img img{
+    width: 50%;
+    margin: auto;
+    filter: drop-shadow(0 0 10px #80bffa72);
+}
+
+.modal_category{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--primary-color);
+    background-color: var(--primary-color-darker);
+}
+
+.modal_info h2{
+    margin: 15px 0;
+    font-size: 3rem;
+    color: var(--white);
+}
+
+.modal_info p{
+    line-height: 1.8rem;
+    color: var(--text-light);
+}
+
+.modal_features{
+    margin: 25px 0;
+}
+
+.modal_features li{
+    margin-bottom: 12px;
+    color: var(--white);
+}
+
+.modal_info h3{
+    margin-bottom: 25px;
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.modal_info button{
+    width: 90%;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    color: var(--text-dark);
+    background: var(--primary-color-dark);
+    transition: 0.3s;
+}
+
+.modal_info button:hover{
+    color: var(--white);
+    background: var(--primary-color-darker);
+}
+
+.modal_bottom{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 30px;
+    margin-top: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    background:#021940;
+}
+
+.bottom_item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.bottom_item i{
+    font-size: 35px;
+    color: var(--primary-color-dark);
+}
+
+.bottom_item p{
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--white);
+}
+
+/*--------- BENEFITS --------*/
 .benefits{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -312,7 +441,7 @@ span{
     color: var(--white);
 }
 
-/*---------- footer ----------*/
+/*---------- FOOTER ----------*/
 footer{
     display: flex;
     align-items: center;

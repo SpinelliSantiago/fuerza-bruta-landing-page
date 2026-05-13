@@ -12,6 +12,8 @@
     <title>Landing Page / Fuerza Bruta</title>
     </head>
     <body>
+
+<!----------NAV----------->
     <nav>
         <div class="nav_header">
         <div class="nav_logo">
@@ -24,14 +26,15 @@
         </div>
         </div>
         <ul class="nav_links" id="nav-links">
-        <li><a href="#inicio">INICIO</a></li>
-        <li><a href="#productos">PRODUCTOS</a></li>
+        <li><a href="#start">INICIO</a></li>
+        <li><a href="#products">PRODUCTOS</a></li>
         <li><a href="#">CONTACTO</a></li>
         </ul>
     </nav>
 
+<!----------HEADER----------->
     <header>
-        <div class="header_image" id="inicio">
+        <div class="header_image" id="start">
             <img src="assets/header.png" alt="header" />
         </div>
         <div class="header_content">
@@ -61,9 +64,10 @@
         </div>
     </header>
 
+<!----------PRODUCTS----------->
     <section>
-        <div id="productos">
-            <div class="header_productos">
+        <div id="products">
+            <div class="header_products">
                 <h4>NUESTROS PRODUCTOS</h4>
                 <h3>Potenciá cada entrenamiento</h3>
                 <p>Suplementos de calidad premium para ayudarte a alcanzar tus objetivos</p>
@@ -77,7 +81,14 @@
                     
                     <div class="card_footer">
                         <span>$32.000</span>
-                        <button>Ver más</button>
+                        <button
+                            class="open_modal"
+                            data-title="Proteina Whey"
+                            data-price="$32.000"
+                            data-image="Productos/protein.png"
+                            data-description="Favorece la recuperación y el crecimiento muscular.">
+                            Ver más
+                        </button>
                     </div>
                 </div>
 
@@ -88,7 +99,14 @@
                     
                     <div class="card_footer">
                         <span>$18.000</span>
-                        <button>Ver más</button>
+                        <button
+                            class="open_modal"
+                            data-title="Creatina Monohidrato"
+                            data-price="$18.000"
+                            data-image="Productos/creatina.png"
+                            data-description="Aumenta la fuerza, potencia y rendimiento fisico.">
+                            Ver más
+                        </button>
                     </div>
                 </div>
 
@@ -99,7 +117,14 @@
                     
                     <div class="card_footer">
                         <span>$24.000</span>
-                        <button>Ver más</button>
+                        <button
+                            class="open_modal"
+                            data-title="Pre-Entreno"
+                            data-price="$24.000"
+                            data-image="Productos/pre-entreno.png"
+                            data-description="Energía explosiva y enfoque para entrenamientos intensos.">
+                            Ver más
+                        </button>
                     </div>
                 </div>
 
@@ -110,7 +135,14 @@
                     
                     <div class="card_footer">
                         <span>$17.000</span>
-                        <button>Ver más</button>
+                        <button
+                            class="open_modal"
+                            data-title="BCAA 2:1:1"
+                            data-price="$17.000"
+                            data-image="Productos/bcaa.png"
+                            data-description="Reduce fatiga y mejora la recuperación muscular.">
+                            Ver más
+                        </button>
                     </div>
                 </div>
 
@@ -121,7 +153,14 @@
                     
                     <div class="card_footer">
                         <span>$38.000</span>
-                        <button>Ver más</button>
+                        <button
+                            class="open_modal"
+                            data-title="Ganador de Peso"
+                            data-price="$38.000"
+                            data-image="Productos/ganador-peso.png"
+                            data-description="Aporta calorías y nutrientes para aumentar tu masa muscular.">
+                            Ver más
+                        </button>
                     </div>
                 </div>
 
@@ -132,7 +171,14 @@
                     
                     <div class="card_footer">
                         <span>$12.000</span>
-                        <button>Ver más</button>
+                        <button
+                            class="open_modal"
+                            data-title="Multivitamínico"
+                            data-price="$12.000"
+                            data-image="Productos/multivitamínico.png"
+                            data-description="Complejo de vitaminas y minerales para tu día a día.">
+                            Ver más
+                        </button>
                     </div>
                 </div>
 
@@ -140,6 +186,56 @@
         </div>
     </section>
 
+<!--------------MODAL-------------->
+    <div class="modal">
+
+        <div class="modal_content">
+            <span class="close_modal">
+                <i class="ri-close-line"></i>
+            </span>
+
+            <div class="modal_product">
+                <div class="modal_img">
+                    <img src="Productos/protein.png" alt="protein">
+                </div>
+
+                <div class="modal_info">
+                    <span class="modal_category">PROTEÍNAS</span>
+                    <h2>Proteína Whey</h2>
+                    <p>
+                        Favorece la recuperación muscular y el crecimiento.
+                        Aporta proteínas de alta calidad para mejorar tu
+                        rendimiento y alcanzar tus objetivos.
+                    </p>
+                    <ul class="modal_features">
+                        <li>Alta calidad de proteína</li>
+                        <li>Rapida absorción</li>
+                        <li>Favorece la recuperación</li>
+                        <li>Ideal para después de entrenar</li>
+                    </ul>
+                    <h3>$32.000</h3>
+                    <button>AGREGAR AL CARRITO</button>
+                </div>
+            </div>
+
+            <div class="modal_bottom">
+                <div class="bottom_item">
+                    <i class="ri-truck-line"></i>
+                    <p>ENVÍOS A TODO EL PAIS</p>
+                </div>
+                <div class="bottom_item">
+                    <i class="ri-lock-line"></i>
+                    <p>PAGOS 100% SEGUROS</p>
+                </div>
+                <div class="bottom_item">
+                    <i class="ri-shield-check-line"></i>
+                    <p>SATISFACCIÓN GARANTIZADA</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!----------BENEFITS------------>
     <section class="benefits" id="benefits">
         <div class="benefit">
             <i class="ri-shield-check-line"></i>
@@ -159,6 +255,7 @@
         </div>
     </section>
 
+<!-----------FOOTER------------>
     <footer>
         <img src="assets/logo-white.png" alt="logo" class="logo-white" />
 
