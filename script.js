@@ -17,12 +17,12 @@ navLinks.addEventListener("click", () => {
     menuBtnIcon.setAttribute("class", "ri-menu-4-line");
 });
 
-
-
+/*---------MODAL---------*/
 const modal = document.querySelector(".modal");
 const openModalButtons = document.querySelectorAll(".open_modal");
 const closeModal = document.querySelector(".close_modal");
 
+const modalCategory = document.querySelector(".modal_info span");
 const modalTitle = document.querySelector(".modal_info h2");
 const modalPrice = document.querySelector(".modal_info h3");
 const modalImage = document.querySelector(".modal_img img");
@@ -32,6 +32,7 @@ openModalButtons.forEach((button) => {
     button.addEventListener("click", () => {
         modal.classList.add("active");
 
+        modalCategory.textContent = button.dataset.category;
         modalTitle.textContent = button.dataset.title;
         modalPrice.textContent = button.dataset.price;
         modalImage.src = button.dataset.image;
@@ -46,11 +47,42 @@ closeModal.addEventListener("click", () => {
 modal.addEventListener("click", (event) => {
     if(event.target === modal){
     modal.classList.remove("active");
-    }
+    };
 });
 
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape"){
+    modal.classList.remove("active");
+    };
+});
 
+/*---------MODAL FORM---------*/
+const modalForm = document.querySelector(".modal_form");
+const openModalForm = document.querySelector(".open_modal_form");
+const closeModalForm = document.querySelector(".close_modal_form");
+const form = document.querySelector("form")
 
+openModalForm.addEventListener("click" , () => {
+    modalForm.classList.add("active");
+});
+
+closeModalForm.addEventListener("click", () => {
+    modalForm.classList.remove("active");
+});
+
+modalForm.addEventListener("click", (event) => {
+    if(event.target === modalForm){
+    modalForm.classList.remove("active");
+    };
+});
+
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape"){
+    modalForm.classList.remove("active");
+    };
+});
+
+/*---------SCROLL---------*/
 const scrollRevealOption = {
     distance: "50px",
     origin: "bottom",

@@ -28,7 +28,7 @@
         <ul class="nav_links" id="nav-links">
         <li><a href="#start">INICIO</a></li>
         <li><a href="#products">PRODUCTOS</a></li>
-        <li><a href="#">CONTACTO</a></li>
+        <li><a href="#contact">CONTACTO</a></li>
         </ul>
     </nav>
 
@@ -83,6 +83,7 @@
                         <span>$32.000</span>
                         <button
                             class="open_modal"
+                            data-category="PROTEINA"
                             data-title="Proteina Whey"
                             data-price="$32.000"
                             data-image="Productos/protein.png"
@@ -101,6 +102,7 @@
                         <span>$18.000</span>
                         <button
                             class="open_modal"
+                            data-category="CREATINA"
                             data-title="Creatina Monohidrato"
                             data-price="$18.000"
                             data-image="Productos/creatina.png"
@@ -119,6 +121,7 @@
                         <span>$24.000</span>
                         <button
                             class="open_modal"
+                            data-category="PRE-ENTRENO"
                             data-title="Pre-Entreno"
                             data-price="$24.000"
                             data-image="Productos/pre-entreno.png"
@@ -137,6 +140,7 @@
                         <span>$17.000</span>
                         <button
                             class="open_modal"
+                            data-category="BCAA"
                             data-title="BCAA 2:1:1"
                             data-price="$17.000"
                             data-image="Productos/bcaa.png"
@@ -155,6 +159,7 @@
                         <span>$38.000</span>
                         <button
                             class="open_modal"
+                            data-category="GANADOR DE PESO"
                             data-title="Ganador de Peso"
                             data-price="$38.000"
                             data-image="Productos/ganador-peso.png"
@@ -173,6 +178,7 @@
                         <span>$12.000</span>
                         <button
                             class="open_modal"
+                            data-category="MULTIVITAMÍNICO"
                             data-title="Multivitamínico"
                             data-price="$12.000"
                             data-image="Productos/multivitamínico.png"
@@ -254,6 +260,36 @@
             <p>RESULTADOS REALES</p>
         </div>
     </section>
+
+<!-----------CONTACT------------>
+    <form id="contact">
+        <h2>
+            CONTACTO
+        </h2>
+        <p>
+            Contactanos y llevá tu rendimiento al siguiente nivel
+        </p>
+
+        <input id="name" placeholder="Nombre" type="text" required>
+        <input id="email" placeholder="Email" type="email" required>
+        <textarea placeholder="Deja tu mensaje" required></textarea>
+        
+        <button class="open_modal_form" type="submit">Enviar</button>
+    </form>
+
+    <div class="modal_form">
+        <div class="modal_form_content">
+            <i class="ri-checkbox-circle-line"></i>
+            <h3>
+                ¡MENSAJE ENVIADO!
+            </h3>
+            <p>
+                Gracias por contactaros. <br> Te responderemos a la brevedad.
+            </p>
+            <button class="close_modal_form">ACEPTAR</button>
+        </div>
+    </div>
+
 
 <!-----------FOOTER------------>
     <footer>

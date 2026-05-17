@@ -196,10 +196,15 @@ header{
 .header_products h3::after{
     content: "";
     display: block;
-    width: 10%;
+    width: 80%;
     height: 3px;
-    background-color: var(--primary-color-dark);
     margin: 25px auto 0;
+    background: linear-gradient(
+        to right,
+        transparent,
+        var(--primary-color-dark),
+        transparent
+    )
 }
 
 .header_products p{
@@ -228,6 +233,7 @@ header{
 
 .card:hover{
     transform: translateY( -10px);
+    box-shadow: 0 0 5px #80bffa84;
 }
 
 .card h3{
@@ -441,6 +447,173 @@ span{
     color: var(--white);
 }
 
+/*---------- FORM ----------*/
+form{
+    display: grid;
+    width: 50%;
+    margin: 0 auto 60px;
+    gap: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px transparent;
+    box-shadow: 0 0 8px #80bffa2e;
+    background: #121e36;
+}
+
+form h2{
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 40px 0 10px 0;
+    border-radius: 8px;
+    color: var(--white)
+}
+
+form h2::after{
+    content: "";
+    display: block;
+    width: 80%;
+    height: 1px;
+    margin: 25px auto 0;
+    background: linear-gradient(
+        to right,
+        transparent,
+        var(--primary-color-dark),
+        transparent
+    );
+}
+
+form p{
+    font-size: 18px;
+    margin: 10px auto 60px;
+    color: var(--white);
+}
+
+form input{
+    padding: 10px;
+    border: none;
+    font-size: 14px;
+    border-bottom: 1px solid var(--primary-color);
+    border-radius: 8px;
+    background: transparent;
+    color: var(--white);
+    transition: 0.3s;
+}
+
+form input:hover{
+    border-bottom: 1px solid var(--primary-color-dark);
+}
+
+form input::placeholder{
+    font-family: "Montserrat";
+    color: var(--text-light);
+}
+
+input:-webkit-autofill{
+    -webkit-box-shadow: 0 0 0 1000px #121e36 inset;
+    -webkit-text-fill-color: white;
+}
+
+form textarea{
+    padding: 10px;
+    border: none;
+    font-size: 14px;
+    border-bottom: 1px solid var(--primary-color);
+    border-radius: 5px;
+    height: 160px;
+    resize: none;
+    background: transparent;
+    color: var(--white);
+    transition: 0.3s;
+}
+
+form textarea:hover{
+    border-bottom: 1px solid var(--primary-color-dark);
+}
+
+form textarea::placeholder{
+    font-family: "Montserrat";
+    font-size: 14px;
+    color: var(--text-light);
+}
+
+form button{
+    margin: 20px 0;
+    border: solid 2px var(--primary-color);
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: var(--primary-color);
+    color: var(--text-dark);
+    transition: 0.3s;
+}
+
+form button:hover{
+    cursor: pointer;
+    border: solid 2px var(--primary-color);
+    background: var(--primary-color-darker);
+    color: var(--white);
+}
+
+/*---------- MODAL FORM ----------*/
+.modal_form{
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    backdrop-filter: blur(5px);
+}
+
+.modal_form.active{
+    display: flex;
+}
+
+.modal_form_content{
+    text-align: center;
+    max-width: 50%;
+    padding: 30px 70px;
+    border-radius: 8px;
+    background: #07132b;
+}
+
+.modal_form_content i{
+    font-size: 80px;
+    color: var(--primary-color-dark);
+}
+
+.modal_form_content h3{
+    margin: 10px 0 20px 0;
+    font-size: 20px;
+    color: var(--white);
+}
+
+.modal_form_content p{
+    font-size: 16px;
+    margin-top: 15px;
+    color: var(--text-light);
+}
+
+.modal_form_content button{
+    margin: 30px 0 10px 0;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 2px solid var(--primary-color-dark);
+    color: var(--primary-color-dark);
+    background: transparent;
+    transition: 0.3s;
+}
+
+.modal_form_content button:hover{
+    cursor: pointer;
+    border: 2px solid var(--white);
+    color: var(--white);
+}
+
 /*---------- FOOTER ----------*/
 footer{
     display: flex;
@@ -568,6 +741,20 @@ p{
     grid-template-columns: 1fr;
     margin: 40px;
     gap: 22px;
+}
+
+form{
+    width: 90%;
+}
+
+form p{
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.modal_form_content{
+    max-width: 90%;
+    padding: 20px 10px;
 }
 
 footer{
